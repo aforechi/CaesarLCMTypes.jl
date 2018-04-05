@@ -5,8 +5,23 @@ The Julia portion relies on [LCMCore.jl](http://github.com/rdeits/LCMCore.jl).
 
 # Installation
 
-This package may take some time to register on the Julia METADATA package ecosystem.
-
-```
+This package may take some time before being registered on the Julia METADATA package ecosystem.  For now just use the direct clone:
+```julia
 Pkg.clone("https://github.com/JuliaRobotics/CaesarLCMTypes.jl.git")
+```
+
+# Basic usage example
+
+```julia
+using LCMCore, CaesarLCMTypes
+
+function callback(channel, msg)
+  @show msg.utime
+end
+
+lcm = LCM()
+
+subscribe(lcm, "CHANNEL", callback, pose_pose_nh_t)
+
+while (isgood(lcm)) end
 ```
