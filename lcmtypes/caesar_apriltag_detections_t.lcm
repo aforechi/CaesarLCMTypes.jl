@@ -1,0 +1,8 @@
+package caesar;
+
+struct apriltag_detections_t
+{
+  int64_t   timestamp;
+  int32_t   num_detections;
+  TagPose_t detections[num_detections];
+}
