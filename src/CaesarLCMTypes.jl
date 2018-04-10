@@ -14,7 +14,6 @@ pose_pose_xyh_nh_t,
 pose_pose_xyh_t,
 prior_zpr_t
 
-include("atlas_command_t.jl")
 include("apriltag_detections_t.jl")
 include("apriltag_t.jl")
 include("point_cloud_t.jl")
