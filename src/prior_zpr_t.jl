@@ -1,4 +1,4 @@
-mutable struct prior_zpr_t
+mutable struct prior_zpr_t <: LCMType
   utime::Int64 # unix time associated with this pose
   id::Int64    # pose id (sequential, 0-based)
 

@@ -1,4 +1,4 @@
-mutable struct apriltag_t
+mutable struct apriltag_t <: LCMType
   id::Int32
   hammingDistance::Int32
   p::SMatrix{4,2,Float64}

@@ -1,4 +1,4 @@
-mutable struct pose_pose_xyh_nh_t
+mutable struct pose_pose_xyh_nh_t <: LCMType
   utime::Int64        # unix time associated with this pose
 
   node_1_utime::Int64 # pose 1 (source) utime

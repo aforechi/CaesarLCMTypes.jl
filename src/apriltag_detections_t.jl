@@ -1,4 +1,4 @@
-mutable struct apriltag_detections_t
+mutable struct apriltag_detections_t <: LCMType
   timestamp::Int64
   num_detections::Int32
   detections::Vector{apriltag_t}
