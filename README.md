@@ -22,6 +22,8 @@ using LCMCore, CaesarLCMTypes
 
 function callback(channel, msg)
   @show msg.utime
+  # ...
+  nothing
 end
 
 lcm = LCM()
