@@ -7,19 +7,12 @@ using Base.Test
 
 #=
 The following Python code was used to retrieve all of the
-fingerprints for the various bot_core lcmtypes automatically:
+fingerprints for the various caesar lcmtypes automatically:
 import sys
 import inspect
 import struct
-import bot_core
-for name, obj in inspect.getmembers(bot_core):
-    if inspect.isclass(obj):
-        print("{:s} => {:d},".format(name, struct.unpack('q', obj._get_packed_fingerprint())[0]))
-import sys
-import inspect
-import struct
-import drake
-for name, obj in inspect.getmembers(drake):
+import caesar
+for name, obj in inspect.getmembers(caesar):
     if inspect.isclass(obj):
         print("{:s} => {:d},".format(name, struct.unpack('q', obj._get_packed_fingerprint())[0]))
 =#
@@ -43,13 +36,14 @@ end
 
 @testset "BotCoreLCMTypes" begin
     expected_fingerprints_network_order = Dict(
-        # atlas_command_t => 1312111223708868662,
-        point_cloud_t => 0,
-        pose_node_t => 0,
-        pose_pose_nh_t => 0,
-        pose_pose_xyh_nh_t => 0,
-        pose_pose_xyh_t => 0,
-        prior_zpr_t => 0
+        apriltag_detections_t => -5989715576036496374,
+        apriltag_t => -8216918138892019763,
+        point_cloud_t => 2003008221351621598,
+        pose_node_t => 249794548766818026,
+        pose_pose_nh_t => 4072811593573625988,
+        pose_pose_xyh_nh_t => -6037466938990705104,
+        pose_pose_xyh_t => 9116064949984549703,
+        prior_zpr_t => -3254265534732152215,
     )
 
     for (lcmtype, fingerprint_network_order) in expected_fingerprints_network_order
