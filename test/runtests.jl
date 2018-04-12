@@ -34,7 +34,7 @@ function closeenough(x::LCMType, y::LCMType)
 end
 
 
-@testset "BotCoreLCMTypes" begin
+@testset "CaesarLCMTypes" begin
     expected_fingerprints_network_order = Dict(
         apriltag_detections_t => -5989715576036496374,
         apriltag_t => -8216918138892019763,
