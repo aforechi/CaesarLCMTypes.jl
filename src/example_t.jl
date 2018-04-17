@@ -8,4 +8,6 @@ mutable struct example_t <: LCMType
     enabled::Bool;
 end
 
-@lcmtypesetup(example_t)
+@lcmtypesetup(example_t,
+  ranges => (num_ranges,),
+)
