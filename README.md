@@ -30,5 +30,7 @@ lcm = LCM()
 
 subscribe(lcm, "CHANNEL", callback, pose_pose_nh_t)
 
-while (isgood(lcm)) end
+while true
+  handle(lcm)
+end
 ```
