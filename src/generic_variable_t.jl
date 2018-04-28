@@ -7,7 +7,7 @@ mutable struct generic_variable_t <: LCMCore.LCMType
   datadescription::String
   datalength::Int32
   data::Vector{UInt8}
-}
+end
 
 @lcmtypesetup(generic_variable_t,
   data => (datalength,),

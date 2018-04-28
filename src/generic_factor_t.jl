@@ -10,7 +10,7 @@ mutable struct generic_factor_t <: LCMCore.LCMType
   datadescription::String
   datalength::Int32
   data::Vector{UInt8}
-}
+end
 
 @lcmtypesetup(generic_factor_t,
   data => (datalength,),
