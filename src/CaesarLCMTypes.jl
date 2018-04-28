@@ -14,7 +14,9 @@ export
   pose_pose_xyh_nh_t,
   pose_pose_xyh_t,
   prior_zpr_t,
-  example_t
+  example_t,
+  generic_variable_t,
+  generic_factor_t
 
 include("apriltag_t.jl")
 include("apriltag_detections_t.jl")
