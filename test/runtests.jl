@@ -6,7 +6,10 @@ using LCMCore: fingerprint
 using Base.Test
 
 #=
-The following Python code was used to retrieve all of the
+compile the lcmtypes for Python from the lcmtypes folder:
+$ lcm-gen -p --ppath . caesar_*.lcm
+
+Run rhe following Python code was used to retrieve all of the
 fingerprints for the various caesar lcmtypes automatically:
 import sys
 import inspect
@@ -38,6 +41,9 @@ end
     expected_fingerprints_network_order = Dict(
         apriltag_detections_t => -5989715576036496374,
         apriltag_t => -8216918138892019763,
+        example_t => 1609464439235171639,
+        generic_factor_t => -9150067746642263183,
+        generic_variable_t => -6355586019449534452,
         point_cloud_t => 2003008221351621598,
         pose_node_t => 249794548766818026,
         pose_pose_nh_t => 4072811593573625988,
