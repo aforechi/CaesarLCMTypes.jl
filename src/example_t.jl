@@ -3,7 +3,7 @@ mutable struct example_t <: LCMType
     position::SVector{3, Float64}
     orientation::SVector{4, Float64}
     num_ranges::Int32
-    ranges::Vector{Float64}
+    ranges::Vector{Int16}
     name::String
     enabled::Bool;
 end

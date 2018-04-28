@@ -41,7 +41,7 @@ end
     expected_fingerprints_network_order = Dict(
         apriltag_detections_t => -5989715576036496374,
         apriltag_t => -8216918138892019763,
-        example_t => 1609464439235171639,
+        example_t => 1609464439235171639, # not sure what is wrong with this one
         generic_factor_t => -9150067746642263183,
         generic_variable_t => -6355586019449534452,
         point_cloud_t => 2003008221351621598,
