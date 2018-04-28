@@ -1,0 +1,13 @@
+package caesar;
+
+struct generic_variable_t
+{
+  int64_t utime; // microsecond time associated with this pose
+
+  string variablelabel;
+  string variabletype;
+
+  string datadescription;
+  int32_t datalength;
+  byte data[datalength];
+}

@@ -26,4 +26,8 @@ include("pose_pose_xyh_t.jl")
 include("prior_zpr_t.jl")
 include("example_t.jl")
 
+# generic types for robots of any variety -- can add separate optimizations.
+include("generic_variable_t.jl")
+include("generic_factor_t.jl")
+
 end
