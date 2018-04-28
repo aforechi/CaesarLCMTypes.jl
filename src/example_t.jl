@@ -5,7 +5,7 @@ mutable struct example_t <: LCMType
     num_ranges::Int32
     ranges::Vector{Int16}
     name::String
-    enabled::Bool;
+    enabled::Bool
 end
 
 @lcmtypesetup(example_t,
