@@ -1,0 +1,16 @@
+package caesar;
+
+struct generic_factor_t
+{
+  int64_t utime;  // microsecond time associated with this pose
+
+  int32_t numvariables;
+  string variablelabels[numvariables];
+
+  string factortype;
+
+  // additional payload for generic user
+  string datadescription;
+  int32_t datalength;
+  byte data[datalength];
+}
