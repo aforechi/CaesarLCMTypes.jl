@@ -1,0 +1,10 @@
+package caesar;
+
+struct brookstone_supertype_t
+{
+  int64_t utime; // microsecond time associated with this pose
+
+  generic_variable_t newvariable;
+  generic_factor_t newfactor;
+  image_t img;
+}
