@@ -6,10 +6,9 @@ using LCMCore: fingerprint
 using Base.Test
 
 #=
-compile the lcmtypes for Python from the lcmtypes folder:
-$ lcm-gen -p --ppath . caesar_*.lcm
+first run $ ~/.julia/v0.6/LCMCore/deps/builds/lcm/lcmgen/lcm-gen -p --ppath . *.lcm
 
-Run rhe following Python code was used to retrieve all of the
+The following Python code was used to retrieve all of the
 fingerprints for the various caesar lcmtypes automatically:
 import sys
 import inspect
@@ -38,21 +37,21 @@ end
 
 
 @testset "CaesarLCMTypes" begin
-      expected_fingerprints_network_order = Dict(
-      apriltag_detections_t => -5989715576036496374,
-      apriltag_t => -8216918138892019763,
-      brookstone_supertype_t => 6173426112200236032,
-      example_t => 1609464439235171639,
-      generic_factor_t => -9150067746642263183,
-      generic_variable_t => -6355586019449534452,
-      image_metadata_t => -8143784636512515174,
-      image_t => -1083725853459778796,
-      point_cloud_t => 2003008221351621598,
-      pose_node_t => 249794548766818026,
-      pose_pose_nh_t => 4072811593573625988,
-      pose_pose_xyh_nh_t => -6037466938990705104,
-      pose_pose_xyh_t => 9116064949984549703,
-      prior_zpr_t => -3254265534732152215,
+    expected_fingerprints_network_order = Dict(
+        apriltag_detections_t => -8756471515517054953,
+        apriltag_t => 8846306677841471956,
+        brookstone_supertype_t => 6173426112200236032,
+        example_t => 1609464439235171639,
+        generic_factor_t => -9150067746642263183,
+        generic_variable_t => -6355586019449534452,
+        image_metadata_t => -8143784636512515174,
+        image_t => -1083725853459778796,
+        point_cloud_t => 2003008221351621598,
+        pose_node_t => 249794548766818026,
+        pose_pose_nh_t => 4072811593573625988,
+        pose_pose_xyh_nh_t => -6037466938990705104,
+        pose_pose_xyh_t => 9116064949984549703,
+        prior_zpr_t => -3254265534732152215,
     )
 
     for (lcmtype, fingerprint_network_order) in expected_fingerprints_network_order
