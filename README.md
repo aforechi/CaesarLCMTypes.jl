@@ -9,7 +9,7 @@ This package implements the [LCM](http://lcm-proj.github.io/) type definitions u
 
 This package may take some time before being registered on the Julia METADATA package ecosystem.  For now just use the direct clone:
 ```julia
-Pkg.clone("https://github.com/JuliaRobotics/CaesarLCMTypes.jl.git")
+Pkg.add("CaesarLCMTypes")
 ```
 
 # Basic usage example
