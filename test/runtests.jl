@@ -3,10 +3,11 @@
 using CaesarLCMTypes
 using LCMCore
 using LCMCore: fingerprint
-using Base.Test
+
+using Test
 
 #=
-first run $ ~/.julia/v0.6/LCMCore/deps/builds/lcm/lcmgen/lcm-gen -p --ppath . *.lcm
+first run $ LCMCore/deps/builds/lcm/lcmgen/lcm-gen -p --ppath . *.lcm
 
 The following Python code was used to retrieve all of the
 fingerprints for the various caesar lcmtypes automatically:
@@ -29,7 +30,7 @@ informative.
 closeenough(x, y) = x == y
 function closeenough(x::LCMType, y::LCMType)
     (typeof(x) == typeof(y)) || return false
-    for name in fieldnames(x)
+    for name in fieldnames(typeof(x))
         closeenough(getfield(x, name), getfield(y, name)) || return false
     end
     true
