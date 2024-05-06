@@ -1,7 +1,6 @@
 name = "CaesarLCMTypes"
 uuid = "ac145eff-35a6-4601-a363-8dafea60709f"
-authors = ["Avelino Forechi"]
-version = "1.0.0-DEV"
+version = "0.0.2"
 
 [deps]
 LCMCore = "0ea44823-1ff1-5b9a-8293-5fd55a38e746"
