@@ -7,6 +7,7 @@ LCMCore = "0ea44823-1ff1-5b9a-8293-5fd55a38e746"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 
 [compat]
+LCMCore = "0.6"
 julia = "1.6.7"
 
 [extras]
